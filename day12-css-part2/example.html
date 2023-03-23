@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CSS Properties Example</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				background-color: lightgrey;
+			}
+			css Copy code h1 {
+				font-size: 2em;
+				color: darkblue;
+				text-align: center;
+			}
+
+			h2 {
+				font-size: 1.5em;
+				color: darkgreen;
+			}
+
+			p {
+				font-size: 1em;
+				color: black;
+				line-height: 1.5;
+				text-align: justify;
+			}
+
+			img {
+				display: block;
+				width: 100%;
+				max-width: 300px;
+				height: auto;
+				margin: 0 auto;
+			}
+
+			a {
+				text-decoration: none;
+				color: darkorange;
+				font-weight: bold;
+			}
+
+			a:hover {
+				text-decoration: underline;
+			}
+
+			.container {
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 20px;
+				background-color: white;
+			}
+
+			.box {
+				background-color: lightblue;
+				padding: 20px;
+				margin: 10px 0;
+				border: 2px solid darkblue;
+				border-radius: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>CSS Properties Example</h1>
+			<h2>Text and Font Properties</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula, lacus a ullamcorper condimentum, elit enim cursus odio, vel ultricies dui velit non massa. <a href="#">This is a link</a>.</p>
+			php Copy code
+			<h2>Image and Display Properties</h2>
+			<img src="https://via.placeholder.com/300x200" alt="Example image" />
+
+			<h2>Box Model Properties</h2>
+			<div class="box">This is a box with padding, margin, border, and border-radius applied.</div>
+		</div>
+	</body>
+</html>

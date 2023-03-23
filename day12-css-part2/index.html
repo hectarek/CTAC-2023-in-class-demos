@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        body {
+            background-color: black;
+        }
+        .container {
+            height: 800px;
+            background-color: yellow;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: start;
+            align-items: center;
+
+            animation: move 2s infinite;
+        }
+
+        .child {
+            display: flex;
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+            margin: 10px;
+            justify-content: center;
+            align-items: center;
+
+            animation: color 2s infinite;
+
+            
+        }
+
+        @keyframes color {
+            0% {
+                background-color: orange;
+
+            }
+
+            50% {
+                background-color: red;
+
+            }
+
+            100% {
+                background-color: orange;
+
+            } 
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="child">
+            <p>Box 1</p>
+        </div> 
+    </div>
+    
+</body>
+</html>
