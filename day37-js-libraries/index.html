@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+        <style>
+            .hidden {
+                visibility: hidden;
+            }
+        </style>
+	</head>
+	<body>
+		<div id="header">
+			<h1>My Website</h1>
+		</div>
+		<div id="content">
+			<p>Some content</p>
+            <div>
+                <label for="text">A Textbox</label>
+                <input type="text" name="text" id="text">
+                <button id="list-btn">Click Here</button>
+            </div>
+            <div>
+                <ol id="my-list"></ol>
+            </div>
+            <div>
+                <div id="red-square" class="" style="width: 200px; height: 200px; background-color: red;"></div>
+                <button id="square-btn" >Hide Square</button>
+            </div>
+		</div>
+		<div id="footer">
+			<p>My footer</p>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>

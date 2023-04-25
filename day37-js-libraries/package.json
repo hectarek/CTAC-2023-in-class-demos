@@ -1,0 +1,21 @@
+{
+  "name": "class-demo",
+  "version": "1.0.0",
+  "description": "this is some code to describe my class demo",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "class",
+    "CTAC",
+    "JavaScript"
+  ],
+  "type": "module",
+  "author": "Hector Gonzalez",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.6.4",
+    "moment": "^2.29.4"
+  }
+}
