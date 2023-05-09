@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Currency Converter</title>
+</head>
+<body>
+    <h1>Currency Converter</h1>
+    <div class="converter">
+        <label for="base-currency">Base Currency:</label>
+        <select id="base-currency"></select>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" value="1" min="0">
+        <label for="target-currency">Target Currency:</label>
+        <select id="target-currency"></select>
+        <p>Converted Amount: <span id="converted-amount"></span></p>
+        <button id="historical-rates">View Historical Rates</button>
+        <div id="historical-rates-container"></div>
+        <button id="save-favorite">Save Favorite</button>
+        <div id="favorite-currency-pairs"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

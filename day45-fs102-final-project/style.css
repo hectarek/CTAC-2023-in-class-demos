@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.converter {
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.converter label, .converter select, .converter input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.converter button {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.converter button:hover {
+    background-color: #2980b9;
+}
+
+p {
+    margin-top: 20px;
+}
+
+#historical-rates-container {
+    margin-top: 20px;
+}
+
+#favorite-currency-pairs {
+    display: flex;
+    margin-top: 20px;
+}
+
+#favorite-currency-pairs button {
+    margin-right: 1rem;
+}
+
