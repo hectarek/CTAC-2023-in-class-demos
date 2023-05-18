@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="day52-classdemo">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../day52-classdemo/out/artifacts/day52_classdemo_jar/day52-classdemo.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
