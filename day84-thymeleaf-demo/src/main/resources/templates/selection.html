@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+	<p th:text="${basariliMi} ? 'Başarili' : 'Başarısız'" />
+	
+	<p>
+		<span th:if="${cinsiyet == 'E'}">Erkek</span> <span
+			th:unless="${cinsiyet == 'E'}">Kadin</span>
+	</p>
+
+	<div th:switch="${#lists.size(elementList)}">
+		<p th:case="'0'">Hiç eleman yok</p>
+		<p th:case="'1'">Bir eleman var</p>
+		<p th:case="*">Birden çok eleman var</p>
+	</div>
+
+	<p th:text="${customer1?.name}" />
+	<p th:text="${customer1?.lastName}" />
+
+</body>
+</html>

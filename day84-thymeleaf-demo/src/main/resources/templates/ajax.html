@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+	<label for="otomatik_tamamlama"><b>Otomatik tamamlama:</b></label>
+	<br>
+	<input type="text" placeholder="Enter Username"
+		name="otomatik_tamamlama" onkeyup="showHint(this.value)">
+	<br>
+	<p>
+		Ajax sonuclari: <span id="ajax_sonuclari"></span>
+	</p>
+	
+	<p>
+		Ajax JSON sonuclari: <span id="ajax_json_sonuclari"></span>
+	</p>
+
+	<script>
+		async function showHint(str) {
+			const url = "ajaxJson?query=" + str;
+
+			 let response = await fetch(url);
+			 
+			 console.log(response.status); // 200
+			 console.log(response.statusText); // OK
+			 
+			 if (response.status === 200) {
+			        let data = await response.text();
+			        // handle data
+			        document.getElementById("ajax_sonuclari").innerHTML = data;
+			 }
+			}
+		
+		
+		$(document).ready(
+				function() {
+					$("input[name=otomatik_tamamlama]").keyup(
+							function() {
+								$.get("ajax?query="  + this.value, 
+									function(data, status) {
+										$("#ajax_json_sonuclari").text(data);
+									});
+							});
+				});
+	</script>
+
+</body>
+
+</html>

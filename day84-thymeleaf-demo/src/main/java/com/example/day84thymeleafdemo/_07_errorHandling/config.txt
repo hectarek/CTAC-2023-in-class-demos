@@ -1,0 +1,9 @@
+Kaynak: https://www.baeldung.com/spring-boot-custom-error-page
+
+server.error.whitelabel.enabled=false
+
+spring.autoconfigure.exclude=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration
+
+@EnableAutoConfiguration(exclude = {ErrorMvcAutoConfiguration.class})
+
+server.error.path=/error

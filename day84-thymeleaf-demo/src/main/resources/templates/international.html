@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Home</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script th:src="@{asset/js/internationalization.js}"></script>
+</head>
+<body>
+	<h1 th:text="#{greeting}"></h1>
+	<br/>
+	
+	<h1 th:text="#{hello(${kullanici_adi})}"></h1>
+	<br/>
+	
+	<input type="text" th:placeholder="${i18n_message_from_controller}"/>
+	<br/><br/>
+	
+	<span th:text="#{lang.change}"></span>:
+	<select id="locales">
+		<option value="" th:text="#{lang.select}"></option>
+		<option value="tr" th:text="#{lang.tr}"></option>
+		<option value="en" th:text="#{lang.eng}"></option>
+		<option value="fr" th:text="#{lang.fr}"></option>
+	</select>
+	<br><br>
+	
+	<input type="button" th:value="#{button.value}"/>
+
+	<script th:inline="javascript">
+		$("input[type=button]").click(function(event) {
+			alert([[#{button.click.message}]]);
+		});
+	</script>
+
+</body>
+</html>

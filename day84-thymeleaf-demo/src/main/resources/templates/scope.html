@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <p th:text="'controllerValue = ' + ${controllerValue}" /><br>
+    <p th:text="'requestValue = ' + ${requestValue}" /><br>
+    <p th:text="'param.value = ' + ${param.value}" /><br>
+    <p th:text="'session.sessionValue = ' + ${session.sessionValue}" /><br>
+    <p th:text="'application.applicationValue = ' + ${application.applicationValue}" /><br>
+    
+    
+    
+    
+    <p th:text="${param.size()}" />
+    <p th:text="${param.isEmpty()}" />
+	<p th:text="${param.containsKey('value')}" />
+	<p th:text="${param.foo}" />
+	
+	<p th:text="${session.size()}" />
+    <p th:text="${session.isEmpty()}" />
+	<p th:text="${session.containsKey('foo')}" />
+	<p th:text="${session.foo}" />
+    
+    <p th:text="${application.size()}" />
+    <p th:text="${application.isEmpty()}" />
+	<p th:text="${application.containsKey('foo')}" />
+	<p th:text="${application.foo}" />
+	
+	<p th:text="${#httpServletRequest.getAttribute('requestValue')}" />
+	<p th:text="${#httpServletRequest.getParameter('value')}" />
+	<p th:text="${#httpServletRequest.getContextPath()}" />
+	
+	<p th:text="${#httpSession.getAttribute('sessionValue')}" />
+	<p th:text="${#httpSession.id}" />
+	<p th:text="${#httpSession.lastAccessedTime}" />
+    
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head> 
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/asset/css/style.css}" rel="stylesheet" />
+</head>
+<body>
+
+    <div th:replace="fragments :: header"></div>
+
+	<h2>Hello Thymeleaf</h2>
+	<p>hello thymeleaf <a href="/hello_thymeleaf" target="_blank">here</a></p>
+    <p>Greeting with default value <a href="/greeting" target="_blank">here</a></p>
+    <p>Greeting with parameter <a href="/greeting?name=Ozkan" target="_blank">here</a></p>
+    
+    <p>Path variable with value = 3 <a href="/pathVariable/3" target="_blank">here</a></p>
+    <p>Request parameter with value = 3 <a href="/requestParam?id=3" target="_blank">here</a></p>
+    
+    <p>Path variable optional with no value <a href="/pathVariable/optional/" target="_blank">here</a></p>
+    <p>Path variable optional with value = 3 <a href="/pathVariable/optional/3" target="_blank">here</a></p>
+    <p>Request parameter optional with no value <a href="/requestParam/optional/" target="_blank">here</a></p>
+    <p>Request parameter optional with value = 3 <a href="/requestParam/optional/?id=3" target="_blank">here</a></p>
+    
+    <p>Request mapping <a href="/requestMapping/3" target="_blank">here</a></p>
+    
+    <hr>
+    <h2>@ModelAttribute</h2>
+	<p>Customer CRUD <a href="/customer/" target="_blank">here</a></p>
+	
+	<hr>
+    <h2>Multi language</h2>
+	<p>international <a href="international" target="_blank">here</a></p>
+	
+	<hr>
+    <h2>Scope</h2>
+	<p>Scope <a href="scope?value=val" target="_blank">here</a></p>
+	
+	<hr>
+    <h2>Share data (Controller are singleton)</h2>
+	<p>Share data <a href="share_data" target="_blank">here</a></p>
+	
+	<hr>
+    <h2>Selection (if unless switch case)</h2>
+	<p>Selection <a href="selection" target="_blank">here</a></p>
+
+    <hr>
+    <button>Click Me</button>
+
+    <div th:replace="fragments :: footer"></div>
+
+</body>
+</html>

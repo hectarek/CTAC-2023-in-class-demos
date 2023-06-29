@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+	<div th:if="${counter != null}">
+		<div th:with="counterPlussPluss=${counter + 1}">
+			<p>
+				Yeni counter degeri: <span th:text="${counterPlussPluss}"></span>.
+			</p>
+		</div>
+	</div>
+	<div th:unless="${counter != null}">
+		<p>Counter degeri yok.</p>
+	</div>
+	
+	<input type="text" th:readonly="${okunur}" value="Readonly?" /> <br><br>
+	
+	<input type="text" th:disabled="${kapali}" value="Disabled?"/><br><br>
+	
+	<input type="checkbox" name="active" th:checked="${kapali}" /><br><br>
+	
+	<input type="text" value="Bu tag da ehmt diye bir ozellik var" th:ahmet="${ahmetValue}"/><br><br>
+	
+	 <input type="submit" value="Subscribe!" th:attr="value=${butonValue}"/> <br><br>
+	
+	<p th:text="${textWithHtml}" /> 
+	<p th:utext="${textWithHtml}" />
+	
+	<input type="button" value="Do it!" class="midleClass" th:attrprepend="class=${'preClass '}"  th:attrappend="class=${' postClass'}" />
+	
+	<input type="button" value="Do it!" class="midleClass" th:classprepend="'preClass '"  th:classappend="' postClass'" />
+	
+	 
+	 
+
+</body>
+</html>
